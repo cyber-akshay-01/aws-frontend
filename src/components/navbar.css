@@ -1,0 +1,119 @@
+.site-nav {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  border-bottom: 1px solid var(--color-border);
+  background: rgba(8, 13, 23, 0.76);
+  backdrop-filter: blur(20px);
+}
+
+.site-nav-inner {
+  display: flex;
+  width: min(1440px, calc(100% - 48px));
+  min-height: 68px;
+  align-items: center;
+  gap: 34px;
+  margin: 0 auto;
+}
+
+.brand-link {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 11px;
+  color: #f0f6fc;
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.brand-link img {
+  width: 33px;
+  height: 33px;
+}
+
+.site-nav-links,
+.site-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.site-nav-links {
+  flex: 1;
+}
+
+.site-nav-links a,
+.nav-logout-button {
+  padding: 9px 12px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #aab8ca;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: color 160ms ease, background 160ms ease;
+}
+
+.site-nav-links a:hover,
+.site-nav-links a.active,
+.nav-logout-button:hover {
+  background: rgba(88, 166, 255, 0.1);
+  color: #f0f6fc;
+}
+
+.nav-create-button {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  gap: 7px;
+  padding: 0 12px;
+  border: 1px solid rgba(63, 185, 80, 0.48);
+  border-radius: 8px;
+  background: rgba(35, 134, 54, 0.2);
+  color: #d7f5dc;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.nav-create-button:hover {
+  background: rgba(35, 134, 54, 0.36);
+}
+
+.nav-create-button > span:first-child {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.nav-logout-button {
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .site-nav-inner {
+    width: calc(100% - 28px);
+    min-height: 62px;
+    flex-wrap: wrap;
+    gap: 7px 16px;
+    padding: 10px 0;
+  }
+
+  .site-nav-links {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    border-top: 1px solid rgba(148, 163, 184, 0.11);
+    padding-top: 6px;
+  }
+
+  .site-nav-actions {
+    gap: 2px;
+    margin-left: auto;
+  }
+
+  .nav-create-button {
+    min-height: 34px;
+    padding: 0 9px;
+    font-size: 0.8rem;
+  }
+}
